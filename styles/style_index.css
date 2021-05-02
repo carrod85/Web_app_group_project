@@ -1,0 +1,171 @@
+@charset "utf-8";
+@import "style_main.css";
+@media screen {
+    html,
+    body {
+        background: url("../img/backgroud.jpg") no-repeat center center fixed;
+        -webkit-background-size: 100%;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        position: relative;
+        z-index: -2;
+        box-sizing: border-box;
+    }
+}
+
+.main {
+    background-color: #FFFFFF;
+    width: 500px;
+    height: 500px;
+    margin: 7em auto;
+    border-radius: 18em;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+    position: relative;
+}
+
+.main2 {
+    background-color: #FFFFFF;
+    width: 500px;
+    height: 560px;
+    margin: 7em auto;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+    border-radius: 1em;
+    z-index: -1;
+    position: relative;
+    margin-top: 10px;
+}
+
+
+
+.sign {
+    color: #D1495B;
+    font-weight: bold;
+    font-size: 23px;
+    position: relative;
+    text-align: center;
+    padding-top: 60px;
+}
+
+
+
+.sign2 {
+    color: #D1495B;
+    font-weight: bold;
+    font-size: 23px;
+    position: relative;
+    text-align: center;
+}
+
+.main p {
+    position: relative;
+    text-align: center;
+}
+
+form.form1 {
+    padding-top: 40px;
+    position: relative;
+    text-align: center;
+}
+
+.field {
+    position: relative;
+    color: rgb(38, 50, 56);
+    width: 76%;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background: rgba(136, 126, 126, 0.04);
+    padding: 10px 20px;
+    border-radius: 20px;
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, 0.02);
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.field:focus {
+    border: 2px solid rgba(0, 0, 0, 0.18) !important;
+}
+
+.submit {
+    cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    background: linear-gradient(to right, #FCD78D, #EB9E2A);
+    border: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-size: 13px;
+    position: relative;
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.forgot {
+    cursor: pointer;
+    background: linear-gradient(to right, #ec9831, #cf7507);
+    border-radius: 5em;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    font-size: 13px;
+    position: relative;
+}
+
+.register {
+    cursor: pointer;
+    background: linear-gradient(to right, #6b2656, #4b0a2a);
+    border-radius: 5em;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 13px;
+}
+
+.error {
+    padding-right: 35px;
+    font-size: 14px;
+    position: relative;
+    color: red;
+    text-align: center;
+    top: 10px;
+}
+
+
+
+.link {
+    position: relative;
+    margin-top: 0px;
+    height: 30px;
+}
+
+.link2 {
+    position: relative;
+    margin-top: 20px;
+    height: 30px;
+}
+
+.goback {
+    position: relative;
+    cursor: pointer;
+    background: #c01010;
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 15px 15px;
+    text-align: right;
+    float: right;
+}
