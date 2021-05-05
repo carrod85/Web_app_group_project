@@ -149,7 +149,7 @@ function listCourses($link){
     }
   
     mysqli_stmt_execute($stmt);
-    mysqli_stmt_bind_result($stmt, $course_code, $course_name, $ects_credits, $semester_name);
+    //mysqli_stmt_bind_result($stmt, $course_code, $course_name, $ects_credits, $semester_name);
     $results = mysqli_stmt_get_result($stmt);
   
     while($row = mysqli_fetch_array($results, MYSQLI_NUM)){

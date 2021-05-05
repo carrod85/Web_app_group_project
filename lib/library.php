@@ -3,6 +3,7 @@
 const SESSIONS = "lib/functions_session.php";
 const TEMP_ENG = "lib/tpl_engine.php";
 const TEMPLATE = "templates/tpl_main.php";
+const TEMPLATE2= "templates/tpl_2.php";
 const DATABASE = "lib/connect.db.php";
 
 $day = date('jS');

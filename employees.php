@@ -11,25 +11,13 @@ $link = mysqli_connect($server, $user, $password, $database);
 $message = "";
 
 // function to print out a table of employees and employees deletion form 
-function listEmployees($link) {
+
     $query = "SELECT agent_name, agent_number FROM agents";
-    $results = mysqli_query($link,$query);
-    $table = '<input class="write" type="text" id="myInput" onkeyup="searchEmployeesName()" placeholder="Search for names...">&nbsp&nbsp&nbsp&nbsp<input class="write" type="text" id="myIDInput" onkeyup="searchEmployeesID()" placeholder="Search for ID..."><br>'.
-    "<table id='myTable'><tr><th onclick='sortTable(0)'>Employee name:</th><th onclick='sortTable(1)'>Employee ID:</th></tr>";
-    while($row = mysqli_fetch_array($results, MYSQLI_BOTH)) {
-    $table = $table."<tr><td>".$row["agent_name"]."</td><td>".$row["agent_number"]."</td></tr>";
-    }
-    $tableAndDelete = $table."</table><p></p><form action='employees.php' method='POST'><label for='delete'>Delete employee:</label>&nbsp&nbsp&nbsp&nbsp<select class='write' name = 'delete'>";
     $query = "SELECT agent_name FROM agents ORDER BY agent_name ASC";
-    $results = mysqli_query($link,$query);
-    while($row = mysqli_fetch_array($results, MYSQLI_BOTH)) {
-        $tableAndDelete = $tableAndDelete."<option value='".$row['agent_name']."'>".$row['agent_name']."</option>";
-    }
-    $tableAndDelete = $tableAndDelete."</select>&nbsp&nbsp&nbsp&nbsp<input class='but' type='submit' id='delete' value='Delete' onclick='deleteAlert()'></form>";
-    return $tableAndDelete;
-    }
+    
 
 // function to create a form for employees registration 
+/*
 function addRegistration() {
     $form = "<form action='employees.php' method='POST'>
     <label for='name'>Employee name:</label>
@@ -40,6 +28,7 @@ function addRegistration() {
      </form>";
      return $form;
 }
+*/
 
 // function to write new employees name and id to database
 function writeToTable($link, $name, $number) {
@@ -98,7 +87,7 @@ else if (($_SERVER["REQUEST_METHOD"] == "POST") && (isset($_POST['delete']))) {
     $message = "&#9888; An employee was permanently deleted.";
 }
 
-    $t = new Template(TEMPLATE);
+    $t = new Template(TEMPLATE2);
 
     $t -> assign("admin", adminLink());
     $t -> assign("user", "&#128100; User: ".$_SESSION['name']);
@@ -106,9 +95,10 @@ else if (($_SERVER["REQUEST_METHOD"] == "POST") && (isset($_POST['delete']))) {
     $t -> assign("title1", "Employees management section");
     $t -> assign("subtitle1", "Register a new employee:");
     $t -> assign("error1", "<span class='error'>$message</span>");
-    $t -> assign("content", addRegistration());
+    //$t -> assign("content", addRegistration());
+    $t -> assigntable("table", $link, $query);
     $t -> assign("form", "Searchable table of all the empoyees.<br>"."To sort the employees table in ascendent or descendent order please click on the header.");
-    $t -> assign("table", listEmployees($link));
+    //$t -> assign("table", listEmployees($link));
     $t -> assign("title2", "Latest Updates:");
     $t -> assign("subtitle2", "Now employees are easy to add...");
     $t -> assign("sidecontent1", $lorem);
