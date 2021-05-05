@@ -27,7 +27,7 @@
             <h3>{SUBTITLE1}</h3>
             {ERROR1}
             <p>{CONTENT}</p>
-            <p><form action='employees.php' method='POST'>
+            <p><form action='../employees.php' method='POST'>
                 <label for='name'>Employee name:</label>
                 <input class='write' type='text' name='name' id='name'>
                 <label for='number'>Employee ID:</label>

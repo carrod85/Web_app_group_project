@@ -12,8 +12,8 @@ $message = "";
 
 // function to print out a table of employees and employees deletion form 
 
-    $query = "SELECT agent_name, agent_number FROM agents";
-    $query = "SELECT agent_name FROM agents ORDER BY agent_name ASC";
+    $query1 = "SELECT agent_name, agent_number FROM agents";
+    $query2 = "SELECT agent_name FROM agents ORDER BY agent_name ASC";
     
 
 // function to create a form for employees registration 
@@ -96,7 +96,8 @@ else if (($_SERVER["REQUEST_METHOD"] == "POST") && (isset($_POST['delete']))) {
     $t -> assign("subtitle1", "Register a new employee:");
     $t -> assign("error1", "<span class='error'>$message</span>");
     //$t -> assign("content", addRegistration());
-    $t -> assigntable("table", $link, $query);
+    $t -> assigntable("table", $link, $query1);
+    $t -> assigntable("tableAndDelete", $link, $query2);
     $t -> assign("form", "Searchable table of all the empoyees.<br>"."To sort the employees table in ascendent or descendent order please click on the header.");
     //$t -> assign("table", listEmployees($link));
     $t -> assign("title2", "Latest Updates:");
