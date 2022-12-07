@@ -4,15 +4,6 @@
 - Group name: Cyberbees 
 - Assignment: Employee performance evaluation
 
-### link on enos
-
-https://enos.itcollege.ee/~lumizz/icd0007_project_cyberbees/
-
-### Group members:
-
-- Elina Kurr 201720IVSB elkurr@ttu.ee
-- Carlos Rodriguez 201841IVSB carrod@ttu.ee
-- Luca Mizzi 201843IVSB lumizz@ttu.ee
 
 ### Version 3.3.3 - final for defence!
 - Minor fixes
